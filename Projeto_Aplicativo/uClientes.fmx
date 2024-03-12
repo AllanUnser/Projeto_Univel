@@ -1,0 +1,108 @@
+object frmClientes: TfrmClientes
+  Left = 0
+  Top = 0
+  Caption = 'Clientes'
+  ClientHeight = 480
+  ClientWidth = 229
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 229.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnVoltar: TSpeedButton
+      Align = Left
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbuttonbordered'
+      Text = 'arrowlefttoolbuttonbordered'
+    end
+    object btnInserirCliente: TSpeedButton
+      Align = Right
+      Position.X = 179.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'additembutton'
+      Text = 'additembutton'
+    end
+    object Label1: TLabel
+      Align = Client
+      StyledSettings = [Family, FontColor]
+      Size.Width = 129.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.HorzAlign = Center
+      Text = 'Clientes'
+      TabOrder = 2
+    end
+  end
+  object Layout2: TLayout
+    Align = Top
+    Position.Y = 50.000000000000000000
+    Size.Width = 229.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnPesquisar: TSpeedButton
+      Align = Right
+      Position.X = 179.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'searchtoolbutton'
+    end
+    object editPesquisar: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Center
+      TabOrder = 1
+      Size.Width = 150.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Layout3: TLayout
+    Align = Client
+    Size.Width = 229.000000000000000000
+    Size.Height = 380.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object ListView1: TListView
+      ItemAppearanceClassName = 'TListItemAppearance'
+      ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 229.000000000000000000
+      Size.Height = 380.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Users\ausantos\Desktop\Projeto_Aplicativo\Banco\banc' +
+        'o-univel'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 104
+    Top = 172
+  end
+  object FDQClientes: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select *'
+      'from clientes')
+    Left = 64
+    Top = 268
+  end
+end

@@ -1,0 +1,29 @@
+object frm_Principal: Tfrm_Principal
+  Left = 0
+  Top = 0
+  Caption = 'Projeto Univel'
+  ClientHeight = 480
+  ClientWidth = 228
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object btnClientes: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Clientes'
+  end
+  object btnProdutos: TButton
+    Position.X = 128.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Produtos'
+  end
+end
